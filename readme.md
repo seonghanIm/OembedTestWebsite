@@ -1,4 +1,3 @@
-# PurpleIO 과제 테스트 ReadMe
 
 # Oembed test website
 
