@@ -1,0 +1,136 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Oembed 검색</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body>
+        <h1 style="text-align: center; margin-top: 50px">Oembed 검색</h1>
+<div>
+<form class="row g-3" style="justify-content: center; margin-top: 50px" action="/search" method="get">
+    <div class="col-auto">
+        <input type="text" style="width: 700px" class="form-control" name="url" placeholder="ex) https://www.youtube.com/watch?v=qsshPV4unDU&t=1s">
+    </div>
+    <div class="col-auto">
+        <button type="submit" class="btn btn-primary mb-3">검색</button>
+    </div>
+
+</form>
+</div>
+{{#oembedData}}
+        <div style="justify-content: center; padding: 5%">
+            <table class="table">
+                <tbody>
+                {{#title}}
+                <tr>
+                    <th>title</th>
+                    <td>{{title}}</td>
+                </tr>
+                {{/title}}
+                {{#author_name}}
+                <tr>
+                    <th>author_name</th>
+                    <td>{{author_name}}</td>
+                </tr>
+                {{/author_name}}
+                {{#author_url}}
+                <tr>
+                    <th>author_url</th>
+                    <td>{{author_url}}</td>
+                </tr>
+                {{/author_url}}
+                {{#type}}
+                <tr>
+                    <th>type</th>
+                    <td>{{type}}</td>
+                </tr>
+                {{/type}}
+                {{#height}}
+                <tr>
+                    <th>height</th>
+                    <td>{{height}}</td>
+                </tr>
+                {{/height}}
+                {{#width}}
+                <tr>
+                    <th>width</th>
+                    <td>{{width}}</td>
+                </tr>
+                {{/width}}
+                {{#version}}
+                <tr>
+                    <th>version</th>
+                    <td>{{version}}</td>
+                </tr>
+                {{/version}}
+                {{#provider_name}}
+                <tr>
+                    <th>provider_name</th>
+                    <td>{{provider_name}}</td>
+                </tr>
+                {{/provider_name}}
+                {{#provider_url}}
+                <tr>
+                    <th>provider_url</th>
+                    <td>{{provider_url}}</td>
+                </tr>
+                {{/provider_url}}
+                {{#thumbnail_height}}
+                <tr>
+                    <th>thumbnail_height</th>
+                    <td>{{thumbnail_height}}</td>
+                </tr>
+                {{/thumbnail_height}}
+                {{#thumbnail_width}}
+                <tr>
+                    <th>thumbnail_width</th>
+                    <td>{{thumbnail_width}}</td>
+                </tr>
+                {{/thumbnail_width}}
+                {{#thumbnail_url}}
+                <tr>
+                    <th>thumbnail_url</th>
+                    <td>{{thumbnail_url}}</td>
+                </tr>
+                <tr>
+                    <th></th>
+                    <td style="justify-content: center">
+                        <img src={{thumbnail_url}} style="width: {{thumbnail_width}}; height: {{thumbnail_height}}"></img>
+                    </td>
+                </tr>
+                {{/thumbnail_url}}
+                {{#html}}
+                <tr>
+                    <th>html</th>
+                    <td>{{html}}</td>
+                </tr>
+                <tr>
+                    <th></th>
+                    <td>{{{html}}}</td>
+                </tr>
+                {{/html}}
+                {{#url}}
+                <tr>
+                    <th>url</th>
+                    <td>{{url}}</td>
+                </tr>
+                {{/url}}
+                {{#cache_age}}
+                <tr>
+                    <th>cache_age</th>
+                    <td>{{cache_age}}</td>
+                </tr>
+                {{/cache_age}}
+
+                </tbody>
+            </table>
+        </div>
+        {{/oembedData}}
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+
+</html>
